@@ -12,10 +12,33 @@
 </head>
 </html>
 <body src="script.js" >
-<div>
-<video autoplay muted="muted" loop playsinline="" preload="auto" class="fullscreen bg-video" id="video">
+    <script>
+        function audioPlay() {
+            var audio = document.getElementById("audio");
+            audio.volume = 0.4;
+            audio.play()
+        }
+        function videoPlay() {
+            var video = document.getElementById("video");
+            video.play()
+        }
+    </script>
+    <input type="checkbox" autocomplete="off" id="overlay-toggle">
+    <div class="overlay fullscreen">
+        <label for="overlay-toggle" onclick="audioPlay();videoPlay()">
+            <span class="no-hover" style="font-family: derk; font-size: 30px;">tap to enter</span>
+            <span class="hover" style="font-family: derk; font-size: 30px;">click to enter</span>
+        </label>
+    </div>
+    <audio loop="" preload="auto" id="audio">
+        <source src="writethisdown.mp3" type="audio/mp3">
+    </audio>
+    <video muted="muted" loop="" playsinline="" preload="auto" class="fullscreen bg-video" id="video">
         <source src="dna.mp4" type="video/mp4">
-</video>
+    </video>
+    <section class="fullscreen text-content">
+    </div>
+<div>
 </div>
 <div id="center">
     <h1 id="blinky" font-size: style="font-family: derk; text-shadow: 0 0 0.40em coral; font-size: 80px;">SteveSkid</h1>
